@@ -1,6 +1,7 @@
 # Drone Tracker
 
-Lightweight Rust-based drone telemetry tracker designed for parsing, monitoring, and simulating live flight data streams.
+Basic drone telemetry tracker designed for parsing, monitoring, and simulating live flight data streams.
+Made with Rust.
 
 ## Features
 

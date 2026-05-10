@@ -1,4 +1,4 @@
-# Drone Tracker
+# LogRelay
 
 Basic drone telemetry tracker designed for parsing, monitoring, and simulating live flight data streams.
 Made with Rust.

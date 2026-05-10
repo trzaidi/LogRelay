@@ -13,10 +13,12 @@ Lightweight Rust-based drone telemetry tracker designed for parsing, monitoring,
 
 ## Example Telemetry Packet
 
-1001,22:14:01,40.7128,-74.0060,1200,85
-
 Format:
-packet_id,timestamp,latitude,longitude,altitude_ft,speed_kt
+packet_id,timestamp,latitude,longitude,altitude_ft,speed_kt,heading_deg,signal_dbm
+
+Data:
+1001,22:14:01,40.7128,-74.0060,1200,85,270,-61
+
 
 ## Example Output
 
@@ -28,6 +30,8 @@ LAT: 40.71280
 LON: -74.00600
 ALT: 1200.0 ft
 SPD: 85.0 kt
+HDG: 270.0 deg
+SIG: -61 dBm
 
 ## Roadmap
 

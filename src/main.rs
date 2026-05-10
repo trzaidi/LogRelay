@@ -1,4 +1,5 @@
 mod nmea;
+mod serial_reader;
 
 use std::{thread, time};
 

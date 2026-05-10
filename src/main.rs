@@ -9,7 +9,8 @@ struct Telemetry {
     lon: f64,
     alt_ft: f64,
     speed_kt: f64,
-
+    heading_deg: f64,
+    signal_dbm: f64,
 }
 
 // Parses a telemetry packet string into a Telemetry struct.

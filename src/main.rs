@@ -9,16 +9,17 @@ struct Telemetry {
     lon: f64,
     alt_ft: f64,
     speed_kt: f64,
+
 }
 
 // Parses a telemetry packet string into a Telemetry struct.
 fn parse_packet(packet: &str) -> Result<Telemetry, String> {
     let parts: Vec<&str> = packet.split(',').collect();
 
-    if parts.len() != 6 {
+    if parts.len() != 8 {
         return Err(format!("bad packet: expected 6 fields, got {}", parts.len()));
     }
-
+    // Fields
     Ok(Telemetry {
         packet_id: parts[0].parse().map_err(|_| "Invalid packet id")?,
         timestamp: parts[1].to_string(),
@@ -26,6 +27,8 @@ fn parse_packet(packet: &str) -> Result<Telemetry, String> {
         lon: parts[3].parse().map_err(|_| "Invalid longitude")?,
         alt_ft: parts[4].parse().map_err(|_| "Invalid altitude")?,
         speed_kt: parts[5].parse().map_err(|_| "Invalid speed")?,
+        heading_deg: parts[6].parse().map_err(|_| "invalid heading")?,
+        signal_dbm: parts[7].parse().map_err(|_| "invalid signal strength")?,
     })
 }
 

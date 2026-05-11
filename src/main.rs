@@ -118,3 +118,12 @@ fn main() {
         thread::sleep(time::Duration::from_secs(1));
     }
 }
+
+
+// Main will be condensed to the below or the like once we start ingesting live Orin data from the serial port. The above is just a simulation of the telemetry processing flow.
+/*
+fn main() {
+    serial_reader::read_serial_lines("/dev/ttyUSB0", 9600)
+        .expect("failed to start serial reader");
+}
+*/

@@ -3,15 +3,6 @@
 Basic drone telemetry tracker designed for parsing, monitoring, and simulating live flight data streams.
 Made with Rust.
 
-## Features
-
-* Telemetry packet parsing
-* Simulated live flight updates
-* Altitude monitoring and alerting
-* Timestamped telemetry packets
-* Modular telemetry data structure
-* Rust systems programming foundation
-
 ## Example Telemetry Packet
 
 Format:
@@ -19,7 +10,6 @@ packet_id,timestamp,latitude,longitude,altitude_ft,speed_kt,heading_deg,signal_d
 
 Data:
 1001,22:14:01,40.7128,-74.0060,1200,85,270,-61
-
 
 ## Example Output
 
@@ -40,27 +30,10 @@ SIG: -61 dBm
 * GPS/NMEA integration
 * MAVLink support
 * Telemetry replay system
-* Jetson edge deployment
-* Live dashboard visualization
-* RF signal quality metrics
-* Packet loss simulation
+* Jetson Orin Nano deployment
+* Live display
+* RF status (RSSI, packet loss, etc)
 
-## Tech Stack
-
-* Rust
-* Cargo
-* VS Code
-* Windows / Linux / macOS compatible
-
-## Purpose
-
-This project serves as a lightweight telemetry and flight-monitoring sandbox for learning:
-
-* Systems programming
-* Embedded software workflows
-* Aerospace telemetry concepts
-* Drone/UAS software development
-* Mission systems engineering
 
 ## License
 
